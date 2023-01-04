@@ -1,4 +1,4 @@
-package com.alexkuz.compose_teamplate.ui.theme
+package com.alexkuz.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
