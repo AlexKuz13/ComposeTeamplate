@@ -1,4 +1,4 @@
-package com.alexkuz.compose_teamplate.ui.theme
+package com.alexkuz.app.ui.theme
 
 import android.app.Activity
 import android.os.Build

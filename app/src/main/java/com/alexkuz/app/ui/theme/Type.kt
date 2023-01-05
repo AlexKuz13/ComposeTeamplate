@@ -1,4 +1,4 @@
-package com.alexkuz.compose_teamplate.ui.theme
+package com.alexkuz.app.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
