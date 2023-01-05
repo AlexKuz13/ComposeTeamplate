@@ -5,9 +5,8 @@ plugins {
 
 common()
 compose()
-dagger()
+hilt()
 lifecycle()
-paging()
 
 android {
     defaultConfig {

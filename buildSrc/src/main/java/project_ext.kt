@@ -61,13 +61,7 @@ fun Project.navigation() {
     }
 }
 
-fun Project.paging() {
-    dependencies {
-        implementation(*Libs.bundle.paging)
-    }
-}
-
-fun Project.dagger() {
+fun Project.hilt() {
     plugins.apply {
         apply(Libs.plugin.hilt)
     }

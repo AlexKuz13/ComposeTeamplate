@@ -1,24 +1,23 @@
 object Libs {
 
-    private const val gmsVersion = "4.3.4"
-    private const val gradleVersion = "7.0.4"
-    private const val desugarVersion = "1.1.5"
+    private const val gmsVersion = "4.3.14"
+    private const val gradleVersion = "7.3.1"
+    private const val desugarVersion = "1.2.2"
     private const val kotlinVersion = "1.7.10"
-    private const val kotlinSerializationVersion = "1.3.0"
-    private const val coroutinesVersion = "1.6.0"
-    private const val kotlinterVersion = "3.8.0"
+    private const val kotlinSerializationVersion = "1.4.1"
+    private const val coroutinesVersion = "1.6.4"
+    private const val kotlinterVersion = "3.13.0"
 
     const val composeVersion = "1.3.1"
-    private const val composeMaterialVersion = "1.0.0-alpha09"
+    private const val composeMaterialVersion = "1.0.1"
     private const val splashVersion = "1.0.0"
-    private const val activityVersion = "1.4.0"
-    private const val materialVersion = "1.5.0"
-    private const val pagingComposeVersion = "1.0.0-alpha17"
-    private const val accompanistVersion = "0.24.6-alpha"
-    private const val coilVersion = "2.1.0"
+    private const val activityVersion = "1.6.1"
+    private const val materialVersion = "1.8.0-beta01"
+    private const val accompanistVersion = "0.28.0"
+    private const val coilVersion = "2.2.2"
 
-    private const val lifecycleVersion = "2.4.0"
-    private const val navigationVersion = "2.5.0"
+    private const val lifecycleVersion = "2.5.1"
+    private const val navigationVersion = "2.5.3"
 
     private const val hiltVersion = "2.44.2"
     private const val hiltJetpackVersion = "1.0.0"
@@ -26,36 +25,20 @@ object Libs {
     private const val datastoreVersion = "1.0.0"
     private const val securityVersion = "1.1.0-alpha03"
     private const val preferenceVersion = "1.1.1"
-    private const val roomVersion = "2.4.0"
+    private const val roomVersion = "2.4.3"
     private const val jsonConverterVersion = "0.8.0"
     private const val retrofitVersion = "2.9.0"
-    private const val okHttpVersion = "4.9.0"
+    private const val okHttpVersion = "4.10.0"
     private const val chuckVersion = "3.5.2"
 
-    private const val mockitoVersion = "2.7.22"
-    private const val truthVersion = "0.34"
+    private const val mockitoVersion = "4.11.0"
+    private const val truthVersion = "1.1.3"
     private const val junitVersion = "4.12"
-    private const val espressoVersion = "3.1.0"
-    private const val runnerVersion = "1.1.0"
-
-    private const val googleServicesAuthVersion = "20.2.0"
-
-    private const val protobufVersion = "3.18.0"
-    const val protobufPluginVersion = "0.8.16"
-    private const val protocVersion = "3.10.0"
+    private const val espressoVersion = "3.4.0"
+    private const val runnerVersion = "1.4.0"
 
     const val sonarqubePluginVersion = "3.4.0.2513"
     const val tripletPlayPluginVersion = "3.7.0"
-
-    private const val workManagerVersion = "2.7.1"
-    private const val hiltWorkManagerVersion = "1.0.0"
-
-    private const val jetpackVersion = "2.5.1"
-
-    private const val permissionVersion = "0.20.0"
-
-    private const val imageCropperVersion = "4.3.2"
-    private const val compressorVersion = "3.0.1"
 
     object plugin {
         const val application = "com.android.application"
@@ -103,13 +86,6 @@ object Libs {
         const val hiltKapt = "com.google.dagger:hilt-android-compiler:$hiltVersion"
         const val hiltKaptViewModel = "androidx.hilt:hilt-compiler:$hiltJetpackVersion"
 
-        val firebase = arrayOf<String>(/*
-            "com.google.firebase:firebase-crashlytics-ktx:$crashlyticsVersion",
-            "com.google.firebase:firebase-analytics-ktx:$analyticsVersion",
-            "com.google.firebase:firebase-messaging-ktx:$messagingVersion",
-            "com.google.firebase:firebase-config-ktx:$configVersion"*/
-        )
-
         val composeCompiler = arrayOf("androidx.compose.compiler:compiler:$composeVersion")
         val composeRuntime = arrayOf("androidx.compose.runtime:runtime:$composeVersion")
         val composeTheme = arrayOf(
@@ -132,11 +108,10 @@ object Libs {
             "com.google.accompanist:accompanist-flowlayout:$accompanistVersion",
             "androidx.compose.animation:animation:$composeVersion",
             "io.coil-kt:coil-compose:$coilVersion",
-            "com.google.accompanist:accompanist-permissions:$permissionVersion"
+            "com.google.accompanist:accompanist-permissions:$accompanistVersion"
         )
 
         val splashscreen = arrayOf("androidx.core:core-splashscreen:$splashVersion")
-        val paging = arrayOf("androidx.paging:paging-compose:$pagingComposeVersion")
 
         val lifecycle = arrayOf(
             "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
@@ -184,20 +159,5 @@ object Libs {
             "org.mockito:mockito-android:$mockitoVersion",
             "com.google.truth:truth:$truthVersion"
         )
-
-        const val googleServicesAuth =
-            "com.google.android.gms:play-services-auth:$googleServicesAuthVersion"
-
-        const val protobuf = "com.google.protobuf:protobuf-javalite:$protobufVersion"
-        const val protoc = "com.google.protobuf:protoc:$protocVersion"
-
-        const val workManager = "androidx.work:work-runtime-ktx:$workManagerVersion"
-        const val hiltWorkManager = "androidx.hilt:hilt-work:$hiltWorkManagerVersion"
-        const val hiltWorkManagerKapt = "androidx.hilt:hilt-compiler:$hiltWorkManagerVersion"
-
-        const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$jetpackVersion"
-
-        const val imageCropper = "com.github.CanHub:Android-Image-Cropper:$imageCropperVersion"
-        const val compressor = "id.zelory:compressor:$compressorVersion"
     }
 }
