@@ -48,6 +48,7 @@ android {
 }
 
 dependencies {
+    implementation(projects.coreCommon)
     implementation(*Libs.bundle.composeTheme)
 }
 
