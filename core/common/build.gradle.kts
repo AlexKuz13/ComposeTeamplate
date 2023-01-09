@@ -3,3 +3,6 @@ plugins {
 }
 
 common()
+compose()
+hilt()
+lifecycle()
