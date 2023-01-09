@@ -6,7 +6,7 @@ object Libs {
     private const val kotlinVersion = "1.7.10"
     private const val kotlinSerializationVersion = "1.4.1"
     private const val coroutinesVersion = "1.6.4"
-    private const val kotlinterVersion = "3.13.0"
+    private const val kotlinterVersion = "3.8.0"
 
     const val composeVersion = "1.3.1"
     private const val composeMaterialVersion = "1.0.1"
