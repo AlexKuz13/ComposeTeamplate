@@ -50,6 +50,7 @@ android {
 dependencies {
     implementation(projects.coreCommon)
     implementation(projects.coreUiTheme)
+    implementation(projects.coreData)
     implementation(*Libs.bundle.composeTheme)
 }
 
