@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Teamplate</string>
+
+    <string name="error_connection">Отсутствует подключение к сети, проверьте сетевое соединение</string>
+    <string name="error_invalid_token">Ваша сессия истекла. Необходимо авторизоваться заново</string>
+    <string name="error_server">Сервис временно недоступен. Попробуйте повторить позднее</string>
+    <string name="error_unknown">Произошла ошибка. Попробуйте повторить позднее</string>
 </resources>
