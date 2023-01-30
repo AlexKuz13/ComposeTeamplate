@@ -27,6 +27,8 @@ android {
 
 dependencies {
     implementation(projects.coreCommon)
+    
+    implementation(*Libs.bundle.datastorePreferences)
 
     api(*Libs.bundle.requests)
     api(*Libs.bundle.kotlinSerialization)
