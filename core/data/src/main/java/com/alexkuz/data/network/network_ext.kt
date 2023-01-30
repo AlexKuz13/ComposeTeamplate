@@ -1,9 +1,9 @@
-package com.alexkuz.data
+package com.alexkuz.data.network
 
 import com.alexkuz.corecommon.Completable
 import com.alexkuz.corecommon.Effect
+import com.alexkuz.data.cache.CacheProvider
 import com.alexkuz.data.json.KotlinxSerializationJsonProvider
-import com.alexkuz.data.network.NetworkStateProvider
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -16,6 +16,29 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.concurrent.CancellationException
 import javax.net.ssl.SSLException
+import kotlin.reflect.typeOf
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.minutes
+
+suspend inline fun <reified T : Any> cachedApiCall(
+    key: String,
+    cacheProvider: CacheProvider,
+    dispatcher: CoroutineDispatcher,
+    networkStateProvider: NetworkStateProvider,
+    needActualData: Boolean = false,
+    lifeDuration: Duration = 5.minutes,
+    noinline request: suspend () -> Response<T>,
+): Effect<T> {
+    return if (needActualData) {
+        apiCall(dispatcher, networkStateProvider, request)
+            .doOnSuccess { cacheProvider.save(typeOf<T>(), key, it, lifeDuration) }
+    } else {
+        cacheProvider.get<T>(typeOf<T>(), key)
+            ?.let { Effect.success(it) }
+            ?: apiCall(dispatcher, networkStateProvider, request)
+                .doOnSuccess { cacheProvider.save(typeOf<T>(), key, it, lifeDuration) }
+    }
+}
 
 suspend inline fun <reified T : Any> apiCall(
     dispatcher: CoroutineDispatcher,

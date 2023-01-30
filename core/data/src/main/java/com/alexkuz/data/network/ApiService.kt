@@ -1,4 +1,4 @@
-package com.alexkuz.data
+package com.alexkuz.data.network
 
 import com.alexkuz.coredata.BuildConfig
 

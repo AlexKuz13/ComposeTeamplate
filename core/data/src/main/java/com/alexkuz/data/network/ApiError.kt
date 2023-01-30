@@ -1,4 +1,4 @@
-package com.alexkuz.data
+package com.alexkuz.data.network
 
 import androidx.annotation.StringRes
 import com.alexkuz.corecommon.extensions.ifNullOrBlank
