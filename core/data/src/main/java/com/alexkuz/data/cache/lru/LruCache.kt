@@ -1,7 +1,7 @@
-package com.alexkuz.data.cache
+package com.alexkuz.data.cache.lru
 
 import javax.inject.Qualifier
 
 @Qualifier
 @Retention(AnnotationRetention.RUNTIME)
-annotation class PrefsCacheCleaner
+annotation class LruCache

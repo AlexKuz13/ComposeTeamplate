@@ -1,4 +1,4 @@
-package com.alexkuz.data.cache
+package com.alexkuz.data.cache.prefs
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -6,22 +6,22 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
+import com.alexkuz.data.cache.CacheElement
+import com.alexkuz.data.cache.CacheProvider
 import com.alexkuz.data.json.KotlinxSerializationJsonProvider
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.serializerOrNull
 import java.util.Collections
-import javax.inject.Inject
 import kotlin.reflect.KType
 import kotlin.time.Duration
 
 private const val CACHE_STORE = "cache_store"
 
-class PrefsCacheProvider @Inject constructor(
-    @ApplicationContext private val context: Context,
+class PrefsCacheProvider(
+    private val context: Context,
     private val jsonProvider: KotlinxSerializationJsonProvider,
 ) : CacheProvider {
 
