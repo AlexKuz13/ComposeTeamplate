@@ -1,4 +1,4 @@
-name: Build_debug_apk
+name: pull_request_to_dev
 
 on:
   pull_request:
@@ -13,6 +13,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v1
         with: {java-version: 11}
+
+      - name: CodeStyle
+        run: ./gradlew lintKotlin
 
       - name: Build Project
         run: ./gradlew assembleDebug
