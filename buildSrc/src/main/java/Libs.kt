@@ -40,6 +40,8 @@ object Libs {
     const val sonarqubePluginVersion = "3.4.0.2513"
     const val tripletPlayPluginVersion = "3.7.0"
 
+    private const val compressorVersion = "3.0.1"
+
     object plugin {
         const val application = "com.android.application"
         const val library = "com.android.library"
@@ -159,5 +161,7 @@ object Libs {
             "org.mockito:mockito-android:$mockitoVersion",
             "com.google.truth:truth:$truthVersion"
         )
+
+        const val compressor = "id.zelory:compressor:$compressorVersion"
     }
 }

@@ -5,4 +5,7 @@
     <string name="error_invalid_token">Ваша сессия истекла. Необходимо авторизоваться заново</string>
     <string name="error_server">Сервис временно недоступен. Попробуйте повторить позднее</string>
     <string name="error_unknown">Произошла ошибка. Попробуйте повторить позднее</string>
+    <string name="error_no_file_uri">Файл не найден</string>
+
+    <string name="text_file_provider_path">"%1$s%2$s"</string>
 </resources>
