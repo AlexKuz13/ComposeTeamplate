@@ -29,6 +29,7 @@ dependencies {
     implementation(projects.coreCommon)
     
     implementation(*Libs.bundle.datastorePreferences)
+    implementation(Libs.bundle.compressor)
 
     api(*Libs.bundle.requests)
     api(*Libs.bundle.kotlinSerialization)
