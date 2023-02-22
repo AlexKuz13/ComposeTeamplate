@@ -1,7 +1,7 @@
 package com.alexkuz.data.network
 
 import android.app.Application
-import com.alexkuz.data.network.api.MockApi
+import com.alexkuz.data.network.api.StubApi
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import dagger.Binds
 import dagger.Module
@@ -42,8 +42,8 @@ class NetworkApiProviderModule {
 
     @Provides
     @Singleton
-    fun provideMockApi(config: ApiConfig) =
-        config.builder(MockApi::class.java)
+    fun provideStubApi(config: ApiConfig) =
+        config.builder(StubApi::class.java)
             .service(ApiService.API)
             .build()
 }
